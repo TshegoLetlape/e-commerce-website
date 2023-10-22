@@ -5,7 +5,6 @@ import Address from "./components/Address";
 function App() {
   return (
     <>
-      <Bag />
       <Address />
     </>
   );
