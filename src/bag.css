@@ -1,0 +1,75 @@
+@import url("https://fonts.googleapis.com/css2?family=Cabin&display=swap");
+
+body {
+  background: rgb(230, 230, 230);
+  font-family: "Cabin", sans-serif;
+}
+
+.row {
+  background: #fff;
+  border-radius: 21px;
+  /* width: fit-content; */
+}
+
+.phone {
+  width: fit-content;
+}
+
+h3 {
+  font-size: 31px;
+}
+.color {
+  color: gray;
+  font-weight: 400;
+}
+.rating {
+  color: #12805d;
+}
+.rating .fa {
+  margin-right: 10px;
+}
+
+.fa-star,
+.fa-star-half-o {
+  color: #12805d;
+}
+.fa-star-half-o {
+  margin-right: 15px;
+}
+
+.col {
+  background: #af9f9f;
+  margin: 10px;
+  padding: 10px;
+}
+.qua {
+  padding: 0;
+  margin: 0;
+  width: 150px;
+}
+
+.count {
+  margin: 0 15px;
+}
+.btn {
+  border: none;
+  padding: 5px 15px;
+}
+
+.plus {
+  color: #02d693;
+}
+
+.minus {
+  color: #e5252c;
+}
+
+.plus:hover {
+  background: #02d693;
+  color: aliceblue;
+}
+
+.minus:hover {
+  background: #e5252c;
+  color: #fff;
+}
