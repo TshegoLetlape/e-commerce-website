@@ -12,7 +12,7 @@ export default [
     activities, and even make calls right from your wrist. The Series 5 SE offers several advanced features such as
     heart rate monitoring, GPS tracking, sleep tracking, and support for a wide range of apps from the Apple App Store.
     Its water-resistant design allows you to wear it during workouts and even swim with it.`,
-    imageUrl: "../images/Watch.png",
+    imageUrl: require("../images/Watch.png"),
   },
   {
     id: 2,
@@ -28,7 +28,7 @@ export default [
         you to pair them with your compatible devices, such as smartphones, tablets, or laptops, for a cable-free
         listening experience. The built-in rechargeable battery offers hours of playtime on a single charge, making
         them ideal for long commutes or extended listening sessions.`,
-    imageUrl: "../images/Headphones.png",
+    imageUrl: require("../images/Watch.png"),
   },
   {
     id: 3,
@@ -43,7 +43,7 @@ export default [
     iPhone 12 features a beautiful Super Retina XDR display that offers vibrant colors and deep blacks,
     making it perfect for watching videos, browsing the web, and enjoying your favorite apps. Its A14
     Bionic chip ensures speedy performance and enables you to run the latest apps and games without a hitch.`,
-    imageUrl: "../images/Iphone12-01.png",
+    imageUrl: require("../images/Watch.png"),
   },
   {
     id: 4,
@@ -58,7 +58,7 @@ export default [
      entertainment and productivity needs. One of the standout features of the iPhone 13 is its improved battery
      life, allowing you to go longer between charges. And, with 5G support, you can enjoy lightning-fast internet
       speeds, ensuring smooth streaming and quick downloads. `,
-    imageUrl: "../images/Iphone13-Pro-01.png",
+    imageUrl: require("../images/Watch.png"),
   },
   {
     id: 5,
@@ -73,7 +73,7 @@ export default [
     iPhone 12 features a beautiful Super Retina XDR display that offers vibrant colors and deep blacks,
     making it perfect for watching videos, browsing the web, and enjoying your favorite apps. Its A14
     Bionic chip ensures speedy performance and enables you to run the latest apps and games without a hitch.`,
-    imageUrl: "../images/Iphone12-03.png",
+    imageUrl: require("../images/Watch.png"),
   },
   {
     id: 6,
@@ -88,7 +88,7 @@ export default [
     iPhone 12 features a beautiful Super Retina XDR display that offers vibrant colors and deep blacks,
     making it perfect for watching videos, browsing the web, and enjoying your favorite apps. Its A14
     Bionic chip ensures speedy performance and enables you to run the latest apps and games without a hitch.`,
-    imageUrl: "../images/Iphone12-04.png",
+    imageUrl: require("../images/Watch.png"),
   },
   {
     id: 7,
@@ -103,7 +103,7 @@ export default [
      entertainment and productivity needs. One of the standout features of the iPhone 13 is its improved battery
      life, allowing you to go longer between charges. And, with 5G support, you can enjoy lightning-fast internet
       speeds, ensuring smooth streaming and quick downloads.`,
-    imageUrl: "../images/Iphone12-03.png",
+    imageUrl: require("../images/Watch.png"),
   },
   {
     id: 8,
@@ -117,7 +117,7 @@ export default [
 With OLED technology, the Super Retina XDR display has 800 nits peak brightness outdoors and
 delivers 1200 nits peak brightness for HDR photos and movies.
 Advanced camera system for better photos in any light.`,
-    imageUrl: "../images/Iphone1-03.png",
+    imageUrl: require("../images/Watch.png"),
   },
   {
     id: 9,
@@ -131,7 +131,7 @@ Advanced camera system for better photos in any light.`,
     from wide-angle landscapes to detailed close-ups. The Night mode feature ensures that your low-light
     photography shines.The iPhone 11 also offers Face ID for secure and convenient authentication.
     Its excellent battery life ensures that you can use the device throughout the day without frequent recharging. `,
-    imageUrl: "../images/Iphone12-Pro-02.png",
+    imageUrl: require("../images/Watch.png"),
   },
   {
     id: 10,
@@ -145,6 +145,6 @@ Advanced camera system for better photos in any light.`,
     options, including USB-C and Thunderbolt 4 ports for fast data transfer and external device support.
     Under the hood, the XPS 13 is powered by the latest Intel processors, ensuring snappy performance for
     both everyday tasks and demanding applications.`,
-    imageUrl: "../images/Dell XPS 13-White.png",
+    imageUrl: require("../images/Watch.png"),
   },
 ];
