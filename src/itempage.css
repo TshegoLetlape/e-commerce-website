@@ -1,11 +1,8 @@
-.img {
-  float: left;
-}
-
-.about {
+/* .about {
   float: right;
   margin-right: 25%;
-}
+  
+} */
 .bbtn {
   background-color: transparent;
   color: black;
@@ -15,9 +12,14 @@
   background-color: black;
   color: white;
   border-radius: 5px;
-  padding: 10px;
+  padding: 5px 10px;
 }
-a {
+
+img {
+  background: #fff;
+  border-radius: 10px;
+}
+/* a {
   text-decoration: none;
   display: inline-block;
   padding: 8px 16px;
@@ -31,4 +33,4 @@ a:hover {
 .previous {
   background-color: transparent;
   color: black;
-}
+} */

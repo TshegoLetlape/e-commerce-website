@@ -21,7 +21,9 @@ const Home = () => {
               <p className="p">
                 <span className="price">$ {item.price}</span>
                 <button>
-                  <i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                  <span class="material-symbols-outlined">
+                    medical_services
+                  </span>
                 </button>
               </p>
             </li>

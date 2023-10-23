@@ -45,10 +45,15 @@ input {
   width: 100%;
 }
 
+.material-symbols-outlined {
+  font-size: 22px;
+}
+
 .list-item button {
+  text-align: center;
   background: #1a1f16;
   color: #fff;
-  padding: 4px 8px;
+  padding: 2px 8px 0;
   align-items: center;
   border: none;
   border-radius: 9px;
