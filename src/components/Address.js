@@ -13,7 +13,7 @@ const Address = () => {
           type="text"
           name=""
           value=""
-          placeholder=""
+          placeholder="John Maker"
           required
           id=""
         />
@@ -25,7 +25,7 @@ const Address = () => {
           type="text"
           name=""
           value=""
-          placeholder=""
+          placeholder="123 Plae Ground Street"
           required
           id=""
         />
@@ -37,7 +37,7 @@ const Address = () => {
           type="text"
           name=""
           value=""
-          placeholder=""
+          placeholder="Vermont"
           required
           id=""
         />
@@ -49,7 +49,7 @@ const Address = () => {
           type="text"
           name=""
           value=""
-          placeholder=""
+          placeholder="California"
           required
           id=""
         />
@@ -61,11 +61,12 @@ const Address = () => {
           type="text"
           name=""
           value=""
-          placeholder=""
+          placeholder="United States of America"
           required
           id=""
         />
-        <input className="form-control" type="checkbox" />
+        <input className="form-control" type="checkbox" styl/>
+        
         <label className="form-label">Save this as your default address</label>
         <button>Add Address</button>
       </form>
