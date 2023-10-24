@@ -1,0 +1,25 @@
+.side-bag {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 300px;
+  background: #fff;
+  padding: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.side-bag ul {
+  list-style: none;
+  padding: 0;
+}
+
+.side-bag li {
+  display: flex;
+  align-items: center;
+}
+
+.side-bag img {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+}

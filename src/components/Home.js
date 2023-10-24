@@ -6,7 +6,7 @@ import { addtoCart } from "../redux/cartSlice";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import SideBar from "./SideBar";
-import Sidebag from "./SideBag";
+import SideBag from "./SideBag";
 
 const Home = () => {
   const dispatch = useDispatch();
@@ -66,6 +66,9 @@ const Home = () => {
               </ul>
             ))}
           </div>
+        </div>
+        <div>
+          <SideBag />
         </div>
       </div>
     </div>
