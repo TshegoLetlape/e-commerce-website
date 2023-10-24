@@ -1,6 +1,7 @@
 import details from "./Data";
 import "../itempage.css";
 import { useNavigate, useParams } from "react-router-dom";
+import SideBag from "./SideBag";
 
 const ItemPage = () => {
   // Use the useParams hook to access the `id` parameter from the URL.
@@ -48,6 +49,7 @@ const ItemPage = () => {
           <p className="description">{item.description}</p>
         </div>
       </div>
+      <SideBag />
     </div>
   );
 };

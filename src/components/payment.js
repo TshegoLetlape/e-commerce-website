@@ -109,7 +109,7 @@ function PaymentForm() {
                   </div>
                 </div>
 
-                <button className="btn" variant="dark" size="lg" block>
+                <button className="btn btn-dark" variant="dark" size="lg">
                   Add Payment Method
                 </button>
               </form>

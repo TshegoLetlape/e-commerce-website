@@ -1,6 +1,6 @@
 .side-bag {
   width: 250px;
-  background-color: #f8f9fa;
+  background-color: #ededed;
   padding: 120px 15px 15px 15px;
   display: flex;
   flex-direction: column;
@@ -32,7 +32,4 @@
   width: 30%;
   margin: 1%;
   box-sizing: border-box;
-}
-.line {
-  margin-right: 75%;
 }
