@@ -149,14 +149,7 @@ const Checkout = () => {
                       <small>$6.99</small>
                     </td>
                   </tr>
-                  <tr>
-                    <td>
-                      <small>Estimated GST</small>
-                    </td>
-                    <td>
-                      <small>$760.41</small>
-                    </td>
-                  </tr>
+
                   <tr>
                     <td>
                       <small>Gift Card</small>
