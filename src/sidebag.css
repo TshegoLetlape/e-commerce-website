@@ -10,7 +10,6 @@
   right: 0;
   height: 100vh;
   margin-left: 5rem;
-  border-left: 3px solid #ccc;
 }
 
 .side-bag li {
@@ -33,4 +32,7 @@
   width: 30%;
   margin: 1%;
   box-sizing: border-box;
+}
+.line {
+  margin-right: 75%;
 }
