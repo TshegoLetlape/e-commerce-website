@@ -9,24 +9,24 @@ import SideBar from "./SideBar";
 const Bag = () => {
   const cartItems = useSelector((state) => state.cart.cart);
 
-  const [count, setCount] = useState();
+  const [itemCounts, setItemCounts] = useState({}); // Initialize an empty object to store item counts
 
-  const add = (id) => {
-    setCount((prevCounts) => ({
+  const add = (itemId) => {
+    setItemCounts((prevCounts) => ({
       ...prevCounts,
-      [id]: (prevCounts[id] || 0) + 1,
+      [itemId]: (prevCounts[itemId] || 0) + 1,
     }));
   };
 
   const minus = (itemId) => {
-    if (count[itemId] > 1) {
-      setCount((prevCounts) => ({
+    if (itemCounts[itemId] > 1) {
+      setItemCounts((prevCounts) => ({
         ...prevCounts,
         [itemId]: prevCounts[itemId] - 1,
       }));
     } else {
-      alert("it's gone");
       // You can implement item removal logic here if needed
+      alert("Item will be removed from your cart.");
     }
   };
 
@@ -81,23 +81,26 @@ const Bag = () => {
                         <div className="row pricing">
                           <div className="col-sm-8  col-6">
                             <p>
-                              $ {val.price} x<span> {count}</span>
+                              $ {val.price} x
+                              <span> {itemCounts[val.id] || 1}</span>
                             </p>
                           </div>
                           <div className="col-sm col-6 qua">
-                            <button className="btn minus">
+                            <button
+                              className="btn minus"
+                              onClick={() => minus(val.id)}
+                            >
                               <i class="fa fa-minus" aria-hidden="true"></i>
                             </button>
-                            <span className="count">{count}</span>
-                            <button className="btn plus">
+                            <span className="count">
+                              {itemCounts[val.id] || 1}
+                            </span>
+                            <button
+                              className="btn plus"
+                              onClick={() => add(val.id)}
+                            >
                               <i class="fa fa-plus" aria-hidden="true"></i>
                             </button>
-                            {/* <button
-                    className="btn remove"
-                    onClick={() => removeItem(index)}
-                  >
-                    Remove
-                  </button> */}
                           </div>
                         </div>
                       </div>
