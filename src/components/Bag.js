@@ -8,9 +8,7 @@ import Home from "./Home";
 const Bag = () => {
   const cartItems = useSelector((state) => state.cart.cart);
 
-  // const [item] = useState(data);
   const [count, setCount] = useState();
-  // const [items, setItems] = useState();
 
   const add = (id) => {
     setCount((prevCounts) => ({
@@ -33,7 +31,7 @@ const Bag = () => {
 
   return (
     <div className="container bag-items pt-5">
-      <h1>Check your Bag Items</h1>
+      <h1>REVIEW YOUR BAG</h1>
 
       {cartItems.map((val) => {
         return (
