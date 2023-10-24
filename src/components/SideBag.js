@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import "../sidebag.css";
+=======
+import "../sidebar.css";
+>>>>>>> e3e54b5d591d5b3058ceabfa274cdcf673f50a81
 import { useState } from "react";
 
 const SideBag = () => {
