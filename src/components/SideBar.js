@@ -118,21 +118,15 @@ const SideBar = () => {
               />
             </svg>
           </a>
-        </li>
-
-        <li>
-          <a
-            href="#"
-            className="nav-link py-3 border-bottom rounded-0"
-            title="Customers"
-            data-bs-toggle="tooltip"
-            data-bs-placement="right"
-          >
-            icon 5
-          </a>
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
         </li>
       </ul>
-      <div className="dropdown border-top">
+      <div className=" ">
         <a
           href="#"
           className="d-flex align-items-center justify-content-center p-3 link-body-emphasis text-decoration-none dropdown-toggle"
