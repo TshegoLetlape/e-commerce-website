@@ -1,0 +1,9 @@
+.check-out .cart {
+  position: fixed;
+  background: #fff;
+}
+
+.check-out .total td small {
+  color: #e5252c;
+  font-weight: 500;
+}
