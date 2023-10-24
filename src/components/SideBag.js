@@ -1,7 +1,7 @@
 import "../sidebar.css";
 import { useState } from "react";
 
-const SideBar = () => {
+const SideBag = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -151,4 +151,4 @@ const SideBar = () => {
   );
 };
 
-export default SideBar;
+export default SideBag;
