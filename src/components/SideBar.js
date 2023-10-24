@@ -129,8 +129,8 @@ const SideBar = () => {
       <div className=" ">
         <a
           href="#"
-          className="d-flex align-items-center justify-content-center p-3 link-body-emphasis text-decoration-none dropdown-toggle"
-          data-bs-toggle="dropdown"
+          className="d-flex align-items-center justify-content-center p-3 link-body-emphasis text-decoration-none"
+          data-bs-toggle="d"
           aria-expanded="false"
         >
           <svg
@@ -146,31 +146,6 @@ const SideBar = () => {
             />
           </svg>
         </a>
-        <ul className="dropdown-menu text-small shadow">
-          <li>
-            <a className="dropdown-item" href="#">
-              New project...
-            </a>
-          </li>
-          <li>
-            <a className="dropdown-item" href="#">
-              Settings
-            </a>
-          </li>
-          <li>
-            <a className="dropdown-item" href="#">
-              Profile
-            </a>
-          </li>
-          <li>
-            <hr className="dropdown-divider" />
-          </li>
-          <li>
-            <a className="dropdown-item" href="#">
-              Sign out
-            </a>
-          </li>
-        </ul>
       </div>
     </div>
   );
