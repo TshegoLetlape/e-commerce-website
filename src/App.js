@@ -15,6 +15,7 @@ function App() {
     <>
       <Provider store={store}>
         {/* <SideBar /> */}
+        {/* <Home /> */}
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Home />} exact />
