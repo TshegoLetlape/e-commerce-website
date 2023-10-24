@@ -1,16 +1,19 @@
 import "../sidebar.css";
 import { useState } from "react";
+import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 const SideBar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const cartItems = useSelector((state) => state.cart.cart);
 
   return (
     <div
-      className="d-flex flex-column flex-shrink-0 bg-body-tertiary"
+      className="d-flex flex-column flex-shrink-0   side-bar"
       style={{ width: 4.5 + "rem" }}
     >
-      <a
-        href="/"
+      <Link
+        to="/"
         className="d-block p-3 link-body-emphasis text-decoration-none"
         title="Icon-only"
         data-bs-toggle="tooltip"
@@ -19,20 +22,20 @@ const SideBar = () => {
         <svg className="bi pe-none" width="40" height="32">
           <use href="#bootstrap" />
         </svg>
-        <span className="visually-hidden">Icon-only</span>
-      </a>
+        {/* <span className="visually-hidden">Icon-only</span> */}
+      </Link>
       <ul className="nav nav-pills nav-flush flex-column mb-auto text-center">
         <li className="nav-item">
-          <a
+          <Link
             href="#"
-            className="nav-link active py-3 border-bottom rounded-0"
+            className="nav-link   py-3 border-bottom rounded-0"
             aria-current="page"
             title="Home"
             data-bs-toggle="tooltip"
             data-bs-placement="right"
           >
-            icon 1
-          </a>
+            <i class="fa-brands fa-apple fa-lg"></i>
+          </Link>
         </li>
         <li>
           <a
@@ -42,83 +45,51 @@ const SideBar = () => {
             data-bs-toggle="tooltip"
             data-bs-placement="right"
           >
-            icon 2
+            <i class="fa fa-bars" aria-hidden="true"></i>
           </a>
         </li>
         <li>
-          <a
-            href="#"
+          <Link
+            to="/"
             className="nav-link py-3 border-bottom rounded-0"
-            title="Orders"
+            title="Store"
             data-bs-toggle="tooltip"
             data-bs-placement="right"
           >
-            icon 3
-          </a>
+            <i class="fa-solid fa-store"></i>
+          </Link>
         </li>
         <li>
-          <a
-            href="#"
+          <Link
+            to="/bag"
             className="nav-link py-3 border-bottom rounded-0"
-            title="Products"
+            title="Bag"
             data-bs-toggle="tooltip"
             data-bs-placement="right"
           >
-            icon 4
-          </a>
-        </li>
-        <li>
-          <a
-            href="#"
-            className="nav-link py-3 border-bottom rounded-0"
-            title="Customers"
-            data-bs-toggle="tooltip"
-            data-bs-placement="right"
-          >
-            icon 5
-          </a>
+            <i class="fa-solid fa-bag-shopping"></i>
+            <br />
+            {cartItems.length}
+          </Link>
         </li>
       </ul>
-      <div className="dropdown border-top">
-        <a
-          href="#"
-          className="d-flex align-items-center justify-content-center p-3 link-body-emphasis text-decoration-none dropdown-toggle"
-          data-bs-toggle="dropdown"
-          aria-expanded="false"
+      <div className=" pb-3 pt-3 border-top">
+        <Link
+          title="Checkout"
+          to="/checkout"
+          className="  align-items-center justify-content-center p-3 text-decoration-none "
         >
-          <img
-            src="https://github.com/mdo.png"
-            alt="mdo"
-            width="24"
-            height="24"
-            className="rounded-circle"
-          />
-        </a>
-        <ul className="dropdown-menu text-small shadow">
-          <li>
-            <a className="dropdown-item" href="#">
-              New project...
-            </a>
-          </li>
-          <li>
-            <a className="dropdown-item" href="#">
-              Settings
-            </a>
-          </li>
-          <li>
-            <a className="dropdown-item" href="#">
-              Profile
-            </a>
-          </li>
-          <li>
-            <hr className="dropdown-divider" />
-          </li>
-          <li>
-            <a className="dropdown-item" href="#">
-              Sign out
-            </a>
-          </li>
-        </ul>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            class="bi bi-arrow-right-square-fill"
+            viewBox="0 0 16 16"
+          >
+            <path d="M0 14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2a2 2 0 0 0-2 2v12zm4.5-6.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5a.5.5 0 0 1 0-1z" />
+          </svg>
+        </Link>
       </div>
     </div>
   );

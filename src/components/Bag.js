@@ -4,6 +4,7 @@ import iphone from "../images/Iphone-12-01.png";
 import data from "./Data";
 import { useSelector } from "react-redux";
 import Home from "./Home";
+import SideBar from "./SideBar";
 
 const Bag = () => {
   const cartItems = useSelector((state) => state.cart.cart);
@@ -30,53 +31,144 @@ const Bag = () => {
   };
 
   return (
-    <div className="container bag-items pt-5">
-      <h1>REVIEW YOUR BAG</h1>
-
-      {cartItems.map((val) => {
-        return (
-          <div className="row  pt-3 pb-2 items mt-5" key={val.id}>
-            <div className="col-sm-4 phone">
-              <img className="img-fluid" src={val.imageUrl} alt="item" />
+    <div className="container-fluid">
+      <div className="" id="content">
+        <div class="wrapper d-flex align-items-stretch">
+          <nav id="sidebar">
+            <div class="p-4 pt-5">
+              <a href="#" class="img logo rounded-circle mb-5"></a>
+              <ul class="list-unstyled components mb-5">
+                <li class="active">
+                  <SideBar />
+                </li>
+              </ul>
             </div>
-            <div className="col-sm-7">
-              <h3>{val.productName}</h3>
-              <p className="color">Gray</p>
-              <p>{val.info}</p>
-              <p className="rating">
-                <i class="fa fa-star" aria-hidden="true"></i>
-                <i class="fa fa-star" aria-hidden="true"></i>
-                <i class="fa fa-star" aria-hidden="true"></i>
-                <i class="fa fa-star" aria-hidden="true"></i>
-                <i class="fa fa-star-half-o" aria-hidden="true"></i>{" "}
-                <span>{val.rating}</span>
-              </p>
-              <div className="row pricing">
-                <div className="col-sm-8  col-6">
-                  <p>
-                    $ {val.price} x<span> {count}</span>
-                  </p>
+          </nav>
+        </div>
+
+        <div className="container bag-items pt-5">
+          <h1>REVIEW YOUR BAG</h1>
+
+          {cartItems.map((val) => {
+            return (
+              <div className="row  pt-3 pb-2 items mt-5" key={val.id}>
+                <div className="col-sm-4 phone">
+                  <img className="img-fluid" src={val.imageUrl} alt="item" />
                 </div>
-                <div className="col-sm col-6 qua">
-                  <button className="btn minus">
-                    <i class="fa fa-minus" aria-hidden="true"></i>
-                  </button>
-                  <span className="count">{count}</span>
-                  <button className="btn plus">
-                    <i class="fa fa-plus" aria-hidden="true"></i>
-                  </button>
-                  {/* <button
+                <div className="col-sm-7">
+                  <h3>{val.productName}</h3>
+                  <p className="color">Gray</p>
+                  <p>{val.info}</p>
+                  <p className="rating">
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star-half-o" aria-hidden="true"></i>{" "}
+                    <span>{val.rating}</span>
+                  </p>
+                  <div className="row pricing">
+                    <div className="col-sm-8  col-6">
+                      <p>
+                        $ {val.price} x<span> {count}</span>
+                      </p>
+                    </div>
+                    <div className="col-sm col-6 qua">
+                      <button className="btn minus">
+                        <i class="fa fa-minus" aria-hidden="true"></i>
+                      </button>
+                      <span className="count">{count}</span>
+                      <button className="btn plus">
+                        <i class="fa fa-plus" aria-hidden="true"></i>
+                      </button>
+                      {/* <button
                     className="btn remove"
                     onClick={() => removeItem(index)}
                   >
                     Remove
                   </button> */}
+                    </div>
+                  </div>
                 </div>
               </div>
+            );
+          })}
+        </div>
+      </div>
+      {/* //  /////////////////////////////////////////////////////////////////////////////////////////// */}
+
+      <div className="" id="content">
+        <div class="wrapper d-flex align-items-stretch">
+          <nav id="sidebar">
+            <div class="p-4 pt-5">
+              <a href="#" class="img logo rounded-circle mb-5"></a>
+              <ul class="list-unstyled components mb-5">
+                <li class="active">
+                  <SideBar />
+                </li>
+              </ul>
+            </div>
+          </nav>
+
+          <div id="content" class="p-4 p-md-2">
+            <div className="container bag-items pt-5">
+              <h1>REVIEW YOUR BAG</h1>
+
+              {cartItems.map((val) => {
+                return (
+                  <div className="row  pt-3 pb-2 items mt-5" key={val.id}>
+                    <div className="col-sm-4 phone">
+                      <img
+                        className="img-fluid"
+                        src={val.imageUrl}
+                        alt="item"
+                      />
+                    </div>
+                    <div className="col-sm-7">
+                      <h3>{val.productName}</h3>
+                      <p className="color">Gray</p>
+                      <p>{val.info}</p>
+                      <p className="rating">
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i
+                          class="fa fa-star-half-o"
+                          aria-hidden="true"
+                        ></i>{" "}
+                        <span>{val.rating}</span>
+                      </p>
+                      <div className="row pricing">
+                        <div className="col-sm-8  col-6">
+                          <p>
+                            $ {val.price} x<span> {count}</span>
+                          </p>
+                        </div>
+                        <div className="col-sm col-6 qua">
+                          <button className="btn minus">
+                            <i class="fa fa-minus" aria-hidden="true"></i>
+                          </button>
+                          <span className="count">{count}</span>
+                          <button className="btn plus">
+                            <i class="fa fa-plus" aria-hidden="true"></i>
+                          </button>
+                          {/* <button
+                    className="btn remove"
+                    onClick={() => removeItem(index)}
+                  >
+                    Remove
+                  </button> */}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                );
+              })}
             </div>
           </div>
-        );
-      })}
+        </div>
+      </div>
     </div>
   );
 };

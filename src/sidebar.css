@@ -1,0 +1,16 @@
+.side-bar {
+  background: #fff;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 1%;
+}
+
+.side-bar a {
+  color: black;
+}
+
+.side-bar svg {
+  color: rgb(216, 30, 30);
+  width: 30px;
+}
