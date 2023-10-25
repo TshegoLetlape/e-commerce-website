@@ -103,7 +103,8 @@ export default [
      entertainment and productivity needs. One of the standout features of the iPhone 13 is its improved battery
      life, allowing you to go longer between charges. And, with 5G support, you can enjoy lightning-fast internet
       speeds, ensuring smooth streaming and quick downloads.`,
-    imageUrl: require("../images/Iphone-13-Pro-02.png"),
+
+    imageUrl: require("../images/Iphone-13-Pro-01.png"),
   },
   {
     id: 8,
@@ -117,7 +118,8 @@ export default [
 With OLED technology, the Super Retina XDR display has 800 nits peak brightness outdoors and
 delivers 1200 nits peak brightness for HDR photos and movies.
 Advanced camera system for better photos in any light.`,
-    imageUrl: require("../images/Iphone-13-Pro-03.png"),
+
+    imageUrl: require("../images/Iphone-13-Pro-02.png"),
   },
   {
     id: 9,
@@ -131,7 +133,7 @@ Advanced camera system for better photos in any light.`,
     from wide-angle landscapes to detailed close-ups. The Night mode feature ensures that your low-light
     photography shines.The iPhone 11 also offers Face ID for secure and convenient authentication.
     Its excellent battery life ensures that you can use the device throughout the day without frequent recharging. `,
-    imageUrl: require("../images/Watch.png"),
+    imageUrl: require("../images/Iphone-12-01.png"),
   },
   {
     id: 10,
