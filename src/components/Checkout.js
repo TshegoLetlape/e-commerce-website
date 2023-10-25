@@ -1,11 +1,17 @@
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import "../checkout.css";
 import { useNavigate } from "react-router-dom";
+import { getTotals } from "../redux/cartSlice";
+import { useEffect } from "react";
 
 const Checkout = () => {
   const cartItems = useSelector((state) => state.cart.cart);
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(getTotals());
+  }, [cartItems, dispatch]);
 
   const [itemCounts, setItemCounts] = useState({}); // Initialize an empty object to store item counts
 
@@ -164,7 +170,7 @@ const Checkout = () => {
                       <small>Order Total</small>
                     </td>
                     <td>
-                      <small>$899.00</small>
+                      <small>{cartItems.cart}</small>
                     </td>
                   </tr>
                 </table>

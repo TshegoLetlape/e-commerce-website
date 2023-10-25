@@ -9,8 +9,11 @@ import { BrowserRouter, Routes, Route, Switch } from "react-router-dom";
 import { Provider } from "react-redux";
 import store from "./redux/store";
 import Checkout from "./components/Checkout";
+import { getTotals } from "./redux/cartSlice";
 
 function App() {
+  store.dispatch(getTotals());
+
   return (
     <Provider store={store}>
       <BrowserRouter>
