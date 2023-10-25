@@ -58,7 +58,7 @@ const Home = () => {
                       }
                     >
                       <span className="material-symbols-outlined">
-                        medical_services
+                        shopping_bag
                       </span>
                     </button>
                   </p>
@@ -67,9 +67,8 @@ const Home = () => {
             ))}
           </div>
         </div>
-        <div>
-          <SideBag />
-        </div>
+        <SideBag />
+        <div></div>
       </div>
     </div>
   );
