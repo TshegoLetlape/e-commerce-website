@@ -93,7 +93,7 @@ export default [
   {
     id: 7,
     productName: "Iphone 13 Pro Max",
-    color: "Gray",
+    color: "Blue",
     price: 619.99,
     rating: "4,5/5",
     info: "The iPhone 13 in Product Red is a remarkable addition to Apple's smartphone lineup. Beyond its stunning and vibrant red hue, this device is packed with features and capabilities that make it a standout choice for tech enthusiasts and style-conscious individuals alike.",
@@ -108,11 +108,11 @@ export default [
   },
   {
     id: 8,
-    productName: "Iphone 13 Pro",
-    color: "White",
+    productName: "Iphone 12 Pro",
+    color: "Gray",
     price: 619.99,
     rating: "4,5/5",
-    info: "Phone 13. With the most impressive dual-camera system on iPhone.Capture stunning photos in low light and bright light.",
+    info: "Phone 12. With the most impressive dual-camera system on iPhone.Capture stunning photos in low light and bright light.",
     description: `Crash Detection, a new safety feature, calls for help when you can’t.
     6.1-inch Super Retina XDR display. The iPhone 14 features the popular 6.1-inch display.
 With OLED technology, the Super Retina XDR display has 800 nits peak brightness outdoors and
@@ -123,17 +123,17 @@ Advanced camera system for better photos in any light.`,
   },
   {
     id: 9,
-    productName: "Iphone 11",
+    productName: "Iphone 13",
     color: "Navy Blue",
     price: 619.99,
     rating: "4,5/5",
-    info: "The iPhone 11 in Navy Blue is a testament to Apple's commitment to providing a wide range of options to its customers. While it may not be the latest model, it remains a popular and capable smartphone that offers an array of features.",
+    info: "The iPhone 13 in Navy Blue is a testament to Apple's commitment to providing a wide range of options to its customers. While it may not be the latest model, it remains a popular and capable smartphone that offers an array of features.",
     description: `One of the highlights of the iPhone 11 is its dual-camera system, which 
     includes an ultra-wide and wide lens. This allows users to capture stunning photos and videos,
     from wide-angle landscapes to detailed close-ups. The Night mode feature ensures that your low-light
     photography shines.The iPhone 11 also offers Face ID for secure and convenient authentication.
     Its excellent battery life ensures that you can use the device throughout the day without frequent recharging. `,
-    imageUrl: require("../images/Iphone-12-01.png"),
+    imageUrl: require("../images/Iphone-12-Pro-02.png"),
   },
   {
     id: 10,
