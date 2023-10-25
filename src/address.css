@@ -1,3 +1,11 @@
+.address {
+  width: fit-content;
+  justify-content: center;
+}
+
+.address form {
+  background: #fff;
+}
 .address button:nth-of-type(2) {
   color: green;
 }
@@ -10,7 +18,6 @@
 /* layout  */
 
 .address .add-button {
-  background-color: #007bff; /* Blue background color */
   color: #fff; /* White text color */
   border: none; /* Remove the button border */
   padding: 10px 20px; /* Add some padding */
@@ -18,73 +25,21 @@
   margin-top: 10px; /* Add some top margin to separate it from the checkbox */
 }
 
-.address .add-button:hover {
-  background-color: #0056b3; /* Darker blue on hover */
-}
-
-/* Style the "Secure Connection" text */
 .address button {
-  background: none; /* Remove the background color */
+  background: black; /* Remove the background color */
   border: none; /* Remove the border */
-  padding: 0; /* Remove padding */
+  padding: 5px 10px; /* Remove padding */
+  margin: 5px;
+  border-radius: 5px;
   font-size: 16px; /* Adjust font size */
-  color: #007bff; /* Set text color to blue */
-  cursor: pointer; /* Add a pointer cursor on hover */
-}
-
-.address button:hover {
-  text-decoration: underline; /* Underline the text on hover */
-}
-
-/* Style the "Back" button */
-.button-back {
-  margin-right: 10px; /* Add right margin for spacing */
-}
-
-/* Style the "Secure Connection" text */
-.button-secure-connection {
-  margin-left: 10px; /* Add left margin for spacing */
-}
-
-/* Style the input fields with shadow on placeholders */
-.form-control::placeholder {
-  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.2); /* Add shadow to placeholders */
-}
-
-/* Style the checkbox */
-.checkbox input[type="checkbox"] {
-  display: none;
-}
-
-.checkbox-label {
-  position: relative;
-  padding-left: 25px;
+  color: #fff; /* Set text color to blue */
   cursor: pointer;
 }
-
-.checkbox-label::before {
-  content: "";
-  display: block;
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 16px;
-  height: 16px;
-  border: 1px solid #000;
-  background-color: white;
+.address button:hover {
+  background: #000;
+  color: #fff;
 }
 
-.checkbox input[type="checkbox"]:checked + .checkbox-label::before {
-  background-color: #007bff;
-  border: 1px solid #007bff;
-}
-
-/* Style the "Save this as your default address" label */
-.default-address-label {
-  margin-bottom: 10px; /* Add bottom margin to separate it from the button */
-}
-
-/* Style the "Add Address" button */
-.add-button {
-  margin-top: 0; /* Remove any top margin */
+.address .scr {
+  background: #fff;
 }

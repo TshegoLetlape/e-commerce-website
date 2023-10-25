@@ -1,10 +1,11 @@
 import "../address.css";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Address = () => {
   return (
-    <div className="container address">
-      <form className="form-group" method="POST">
+    <div className="container address   ">
+      <form className="form-group p-5 mt-5" method="POST">
         <label className="form-label" id="">
           Shopping Name
         </label>
@@ -65,13 +66,15 @@ const Address = () => {
           required
           id=""
         />
-        <input className="form-control" type="checkbox" styl />
+        <input className="" type="checkbox" />
 
         <label className="form-label">Save this as your default address</label>
-        <button>Add Address</button>
+        <button className="btn">Add Address</button>
       </form>
-      <button>Back</button>
-      <button>Secure Connection</button>
+      <Link to="/checkout">
+        <button className="btn">Back</button>
+      </Link>
+      {/* <button className="btn scr">Secure Connection</button> */}
     </div>
   );
 };
