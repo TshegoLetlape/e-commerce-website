@@ -56,7 +56,7 @@ const Checkout = () => {
             </div>
             <div className="col">
               <Link to="/address">
-                <button>Chage</button>
+                <button className="btn bg">Chage</button>
               </Link>
             </div>
           </div>
@@ -71,7 +71,7 @@ const Checkout = () => {
             </div>
             <div className="col">
               <Link to="/payment">
-                <button>Change</button>
+                <button className="btn bg">Change</button>
               </Link>
             </div>
           </div>
@@ -180,15 +180,22 @@ const Checkout = () => {
                     </td>
                   </tr>
                 </table>
-                <button className="btn textcenter">Place your Order</button>
-                <br />
-                <button className="btn" onClick={() => navigate(-1)}>
-                  Back
-                </button>
-                <br />
-                <Link to="/">
-                  <button className="btn">continue shopping</button>
-                </Link>
+                <div className="">
+                  <button className="btn textcenter bg">
+                    Place your Order
+                  </button>
+                  <br />
+                  <button className="btn mt-4 bck" onClick={() => navigate(-1)}>
+                    <i class="fa fa-long-arrow-left" aria-hidden="true"></i>Back
+                  </button>
+                  <br />
+                  <Link to="/">
+                    <button className="btn bck">
+                      <i class="fa fa-long-arrow-left" aria-hidden="true"></i>
+                      continue shopping
+                    </button>
+                  </Link>
+                </div>
               </div>
             </div>
           </div>

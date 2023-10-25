@@ -2,9 +2,11 @@ import "../sidebag.css";
 import React from "react";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
+import { useState } from "react";
 
 const SideBag = () => {
   const cartItems = useSelector((state) => state.cart.cart);
+  const [itemCounts, setItemCounts] = useState({});
 
   return (
     <div className="side-bag  ">
@@ -16,6 +18,14 @@ const SideBag = () => {
           </div>
         ))}
       </div>
+
+      <p className="mt-4">
+        <strong>Total: </strong>$
+        {cartItems.reduce(
+          (total, item) => total + item.price * (itemCounts[item.id] || 1),
+          0
+        )}
+      </p>
       <Link to="/bag">
         <svg
           width="120"

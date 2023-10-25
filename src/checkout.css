@@ -7,3 +7,27 @@
   color: #e5252c;
   font-weight: 500;
 }
+
+.check-out .bg {
+  background: #000;
+  color: #fff;
+  border: 2px solid #000;
+  font-weight: 500;
+}
+
+.check-out .bg:hover {
+  border: 2px solid #000;
+  background: #fff;
+  color: #000;
+}
+
+.check-out .fa-long-arrow-left {
+  font-size: 14px;
+  margin-right: 5px;
+  /* font-weight: 400; */
+}
+
+.check-out .bck:hover {
+  color: #e5252c;
+  /* border: solid black; */
+}
