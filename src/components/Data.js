@@ -43,7 +43,7 @@ export default [
     iPhone 12 features a beautiful Super Retina XDR display that offers vibrant colors and deep blacks,
     making it perfect for watching videos, browsing the web, and enjoying your favorite apps. Its A14
     Bionic chip ensures speedy performance and enables you to run the latest apps and games without a hitch.`,
-    imageUrl: require("../images/Iphone-12-03.png"),
+    imageUrl: require("../images/Iphone-12-01.png"),
   },
   {
     id: 4,
