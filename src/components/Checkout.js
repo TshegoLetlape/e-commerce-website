@@ -5,10 +5,12 @@ import "../checkout.css";
 import { useNavigate } from "react-router-dom";
 import { getTotals } from "../redux/cartSlice";
 import { useEffect } from "react";
+import { addtoCart } from "../redux/cartSlice";
 
 const Checkout = () => {
   const cartItems = useSelector((state) => state.cart.cart);
   const dispatch = useDispatch();
+
   useEffect(() => {
     dispatch(getTotals());
   }, [cartItems, dispatch]);
@@ -34,6 +36,10 @@ const Checkout = () => {
     }
   };
 
+  const totalAmount = cartItems.reduce(
+    (total, item) => total + item.price * (itemCounts[item.id] || 1),
+    0
+  );
   const navigate = useNavigate();
 
   return (
@@ -144,7 +150,7 @@ const Checkout = () => {
                       <small>Items</small>
                     </td>
                     <td>
-                      <small>#76686</small>
+                      <small>${totalAmount}</small>
                     </td>
                   </tr>
                   <tr>
@@ -152,7 +158,7 @@ const Checkout = () => {
                       <small>Shipping</small>
                     </td>
                     <td>
-                      <small>$6.99</small>
+                      <small>$0.00</small>
                     </td>
                   </tr>
 
@@ -170,11 +176,11 @@ const Checkout = () => {
                       <small>Order Total</small>
                     </td>
                     <td>
-                      <small>{cartItems.cart}</small>
+                      <small>${totalAmount}</small>
                     </td>
                   </tr>
                 </table>
-                <button className="btn ">Place your Order</button>
+                <button className="btn textcenter">Place your Order</button>
                 <br />
                 <button className="btn" onClick={() => navigate(-1)}>
                   Back

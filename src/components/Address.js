@@ -3,7 +3,7 @@ import { useState } from "react";
 
 const Address = () => {
   return (
-    <div className="container">
+    <div className="container address">
       <form className="form-group" method="POST">
         <label className="form-label" id="">
           Shopping Name
@@ -65,8 +65,8 @@ const Address = () => {
           required
           id=""
         />
-        <input className="form-control" type="checkbox" styl/>
-        
+        <input className="form-control" type="checkbox" styl />
+
         <label className="form-label">Save this as your default address</label>
         <button>Add Address</button>
       </form>

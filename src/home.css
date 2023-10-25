@@ -26,6 +26,10 @@ input {
   color: #000;
 }
 
+.main--items {
+  width: fit-content;
+  max-width: 800px;
+}
 .items {
   display: flex;
   flex-direction: row;
@@ -34,6 +38,7 @@ input {
 .list-item {
   /* background: #bb2e2e; */
   width: 200px;
+
   display: flex;
   padding: 16px;
   flex-direction: column;
@@ -78,4 +83,8 @@ ul {
 
 .price {
   margin-right: auto;
+}
+
+.side--bag nav {
+  background: #d75a5a;
 }

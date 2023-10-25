@@ -1,23 +1,15 @@
-/* Styling for the "Back" button */
-button:nth-of-type(1) {
-  background: none;
-  border: none;
-  color: lightgrey;
-}
-
-/* Styling for the "Secure Connection" button */
-button:nth-of-type(2) {
+.address button:nth-of-type(2) {
   color: green;
 }
 
 /* address.css */
-.form-label {
+.address .form-label {
   margin-top: 18px; /* Adjust the value as needed */
 }
 
 /* layout  */
 
-.add-button {
+.address .add-button {
   background-color: #007bff; /* Blue background color */
   color: #fff; /* White text color */
   border: none; /* Remove the button border */
@@ -26,12 +18,12 @@ button:nth-of-type(2) {
   margin-top: 10px; /* Add some top margin to separate it from the checkbox */
 }
 
-.add-button:hover {
+.address .add-button:hover {
   background-color: #0056b3; /* Darker blue on hover */
 }
 
 /* Style the "Secure Connection" text */
-button {
+.address button {
   background: none; /* Remove the background color */
   border: none; /* Remove the border */
   padding: 0; /* Remove padding */
@@ -40,7 +32,7 @@ button {
   cursor: pointer; /* Add a pointer cursor on hover */
 }
 
-button:hover {
+.address button:hover {
   text-decoration: underline; /* Underline the text on hover */
 }
 

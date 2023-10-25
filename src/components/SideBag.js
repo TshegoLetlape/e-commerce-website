@@ -7,7 +7,7 @@ const SideBag = () => {
   const cartItems = useSelector((state) => state.cart.cart);
 
   return (
-    <div className="side-bag">
+    <div className="side-bag  ">
       <h3>Bag</h3>
       <div className="item-images-container">
         {cartItems.map((item) => (
