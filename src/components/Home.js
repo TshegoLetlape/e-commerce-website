@@ -7,10 +7,12 @@ import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import SideBar from "./SideBar";
 import SideBag from "./SideBag";
+import { useParams } from "react-router-dom";
 
 const Home = () => {
+  const { id } = useParams();
   const dispatch = useDispatch();
-  const cartItems = useSelector((state) => state.cart.cart);
+  // const cartItems = useSelector((state) => state.cart.cart);
 
   const [data, setDta] = useState(details);
 
@@ -37,7 +39,9 @@ const Home = () => {
             {data.map((item) => (
               <ul key={item.id}>
                 <li className=" list-item m-3">
-                  <img src={item.imageUrl} />
+                  <Link to={`./${item.id}`}>
+                    <img src={item.imageUrl} />
+                  </Link>
                   <h5 className="mt-3">{item.productName}</h5>
                   <p className="color">{item.color}</p>
                   <p className="p">

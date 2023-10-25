@@ -19,7 +19,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} exact />
-          <Route path="/items/:id" element={<ItemPage />} />
+          <Route path="/:id" element={<ItemPage />} />
           <Route path="/bag" element={<Bag />} />
           <Route path="/checkout" element={<Checkout />} />
           <Route path="/address" element={<Address />} />
