@@ -5,7 +5,7 @@ import "../checkout.css";
 import { useNavigate } from "react-router-dom";
 import { getTotals } from "../redux/cartSlice";
 import { useEffect } from "react";
-import { addtoCart } from "../redux/cartSlice";
+import { clearCart } from "../redux/cartSlice";
 
 const Checkout = () => {
   const cartItems = useSelector((state) => state.cart.cart);
@@ -36,6 +36,21 @@ const Checkout = () => {
     }
   };
 
+  const resetItemCounts = () => {
+    setItemCounts({});
+  };
+  const navigateHome = useNavigate();
+
+  const resetAndNavigate = () => {
+    dispatch(clearCart()); // Clear the cart in Redux
+    resetItemCounts(); // Reset local state
+    navigateHome("/"); // Navigate back to the homepage
+  };
+
+  const orderSuccessful = () => {
+    alert("Order was successful");
+    resetAndNavigate();
+  };
   const totalAmount = cartItems.reduce(
     (total, item) => total + item.price * (itemCounts[item.id] || 1),
     0
@@ -181,7 +196,10 @@ const Checkout = () => {
                   </tr>
                 </table>
                 <div className="">
-                  <button className="btn textcenter bg">
+                  <button
+                    className="btn textcenter bg"
+                    onClick={orderSuccessful}
+                  >
                     Place your Order
                   </button>
                   <br />
