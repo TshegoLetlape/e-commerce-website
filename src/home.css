@@ -36,9 +36,7 @@ input {
   flex-wrap: wrap;
 }
 .list-item {
-  /* background: #bb2e2e; */
   width: 200px;
-
   display: flex;
   padding: 16px;
   flex-direction: column;
