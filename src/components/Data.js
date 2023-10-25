@@ -28,7 +28,7 @@ export default [
         you to pair them with your compatible devices, such as smartphones, tablets, or laptops, for a cable-free
         listening experience. The built-in rechargeable battery offers hours of playtime on a single charge, making
         them ideal for long commutes or extended listening sessions.`,
-    imageUrl: require("../images/Watch.png"),
+    imageUrl: require("../images/Headphones.png"),
   },
   {
     id: 3,
@@ -47,7 +47,7 @@ export default [
   },
   {
     id: 4,
-    productName: "Iphone 13",
+    productName: "Iphone 13 Pro Max",
     color: "Subway Blue",
     price: 619.99,
     rating: "4,5/5",
@@ -92,8 +92,8 @@ export default [
   },
   {
     id: 7,
-    productName: "Iphone 13",
-    color: "Product red",
+    productName: "Iphone 13 Pro Max",
+    color: "Gray",
     price: 619.99,
     rating: "4,5/5",
     info: "The iPhone 13 in Product Red is a remarkable addition to Apple's smartphone lineup. Beyond its stunning and vibrant red hue, this device is packed with features and capabilities that make it a standout choice for tech enthusiasts and style-conscious individuals alike.",
@@ -103,21 +103,21 @@ export default [
      entertainment and productivity needs. One of the standout features of the iPhone 13 is its improved battery
      life, allowing you to go longer between charges. And, with 5G support, you can enjoy lightning-fast internet
       speeds, ensuring smooth streaming and quick downloads.`,
-    imageUrl: require("../images/Watch.png"),
+    imageUrl: require("../images/Iphone-13-Pro-02.png"),
   },
   {
     id: 8,
-    productName: "Iphone 14",
-    color: "Product Red",
+    productName: "Iphone 13 Pro",
+    color: "White",
     price: 619.99,
     rating: "4,5/5",
-    info: "Phone 14. With the most impressive dual-camera system on iPhone.Capture stunning photos in low light and bright light.",
+    info: "Phone 13. With the most impressive dual-camera system on iPhone.Capture stunning photos in low light and bright light.",
     description: `Crash Detection, a new safety feature, calls for help when you can’t.
     6.1-inch Super Retina XDR display. The iPhone 14 features the popular 6.1-inch display.
 With OLED technology, the Super Retina XDR display has 800 nits peak brightness outdoors and
 delivers 1200 nits peak brightness for HDR photos and movies.
 Advanced camera system for better photos in any light.`,
-    imageUrl: require("../images/Watch.png"),
+    imageUrl: require("../images/Iphone-13-Pro-03.png"),
   },
   {
     id: 9,
@@ -145,6 +145,6 @@ Advanced camera system for better photos in any light.`,
     options, including USB-C and Thunderbolt 4 ports for fast data transfer and external device support.
     Under the hood, the XPS 13 is powered by the latest Intel processors, ensuring snappy performance for
     both everyday tasks and demanding applications.`,
-    imageUrl: require("../images/Watch.png"),
+    imageUrl: require("../images/Dell-XPS-13-White.png"),
   },
 ];
