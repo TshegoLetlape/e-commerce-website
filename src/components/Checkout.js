@@ -6,11 +6,16 @@ import { useNavigate } from "react-router-dom";
 import { getTotals } from "../redux/cartSlice";
 import { useEffect } from "react";
 import { clearCart } from "../redux/cartSlice";
+import PaymentForm from "./payment";
 
 const Checkout = () => {
   const cartItems = useSelector((state) => state.cart.cart);
   const address = useSelector((state) => state.address);
   const dispatch = useDispatch();
+  const [selectedPayment, setSelectedPayment] = useState({
+    cardEnding: "1253",
+    balance: 53.21,
+  });
 
   useEffect(() => {
     dispatch(getTotals());
@@ -73,7 +78,7 @@ const Checkout = () => {
             </div>
             <div className="col">
               <Link to="/address">
-                <button className="btn bg">Chage</button>
+                <button className="btn bg">Change</button>
               </Link>
             </div>
           </div>
