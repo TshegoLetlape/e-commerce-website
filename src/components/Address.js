@@ -3,15 +3,17 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { updateAddress } from "../redux/addressSlice";
+import { useNavigate } from "react-router-dom";
 
 const Address = () => {
+  const navigate = useNavigate();
   const dispatch = useDispatch();
 
   const [data, setData] = useState({
     name: "",
     street: "",
     city: "",
-    state: "",
+    province: "",
     country: "",
   });
 
@@ -24,19 +26,20 @@ const Address = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (data.name.length < 2) {
+    if (!data.name || data.name.length < 2) {
       alert("Please enter a valid name");
-    } else if (data.street.length < 2) {
+    } else if (!data.street || data.street.length < 2) {
       alert("Please enter a valid subject");
-    } else if (data.city.length < 2) {
+    } else if (!data.city || data.city.length < 2) {
       alert("please write a valid message");
-    } else if (data.province.length < 2) {
+    } else if (!data.province || data.province.length < 2) {
       alert("please write a valid message");
-    } else if (data.country.length < 2) {
+    } else if (!data.country || data.country.length < 2) {
       alert("please write a valid message");
     } else {
       dispatch(updateAddress(data));
       alert("your data has been saved");
+      navigate(-1);
     }
   };
   return (
@@ -85,13 +88,13 @@ const Address = () => {
           required
           id=""
         />
-        <label className="form-label" id="state">
+        <label className="form-label" id="province">
           State/Province
         </label>
         <input
           className="form-control"
           type="text"
-          name="state"
+          name="province"
           value={data.province}
           onChange={handleData}
           placeholder="California"
