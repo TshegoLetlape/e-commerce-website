@@ -29,7 +29,8 @@ const PaymentForm = () => {
               <div className="text-center mb-4">
                 <h3>Payment</h3>
               </div>
-              <form>
+              <form  onSubmit={handleSubmit}
+        method="POST">
                 <p className="fw-bold mb-4 pb-2">Saved cards:</p>
 
                 {/* Saved Card 1 */}
