@@ -1,22 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
 import "../payment.css";
 import { Link } from "react-router-dom";
-import { useState } from "react";
 
-const PaymentForm = () => {
+const PaymentForm = ({ onPaymentSubmit }) => {
   const [data, setData] = useState({
     name: "",
     card: "",
     expiry: "",
     cvv: "",
   });
+
   const handleChange = (e) => {
     const name = e.target.name;
     const value = e.target.value;
     setData({ ...data, [name]: value });
   };
+
   const handleSubmit = (e) => {
     e.preventDefault();
+    onPaymentSubmit(data);
     console.log(data);
   };
 
@@ -29,8 +31,7 @@ const PaymentForm = () => {
               <div className="text-center mb-4">
                 <h3>Payment</h3>
               </div>
-              <form  onSubmit={handleSubmit}
-        method="POST">
+              <form onSubmit={handleSubmit}>
                 <p className="fw-bold mb-4 pb-2">Saved cards:</p>
 
                 {/* Saved Card 1 */}
@@ -41,7 +42,7 @@ const PaymentForm = () => {
                     alt="Mastercard"
                   />
                   <div className="flex-fill mx-3">
-                    <div className="form-group" controlId="formControlLgXc">
+                    <div className="form-group">
                       <label className="form-label">Card Number</label>
                       <input type="text" value="**** **** **** 3193" />
                     </div>
@@ -49,21 +50,6 @@ const PaymentForm = () => {
                   <a href="#!">Remove card</a>
                 </div>
 
-                {/* Saved Card 2 */}
-                {/* <div className="d-flex flex-row align-items-center mb-4 pb-1">
-                  <img
-                    className="img-fluid"
-                    src="https://img.icons8.com/color/48/000000/visa.png"
-                    alt="Visa"
-                  />
-                  <div className="flex-fill mx-3">
-                    <Form.Group controlId="formControlLgXs">
-                      <Form.Label>Card Number</Form.Label>
-                      <Form.Control type="text" value="**** **** **** 4296" />
-                    </Form.Group>
-                  </div>
-                  <a href="#!">Remove card</a>
-                </div> */}
                 <div className="d-flex flex-row align-items-center mb-4 pb-1">
                   <img
                     className="img-fluid"
@@ -71,7 +57,7 @@ const PaymentForm = () => {
                     alt="Mastercard"
                   />
                   <div className="flex-fill mx-3">
-                    <div className="form-group" controlId="formControlLgXc">
+                    <div className="form-group">
                       <label className="form-label">Card Number</label>
                       <input type="text" value="**** **** **** 4511" />
                     </div>
@@ -81,62 +67,57 @@ const PaymentForm = () => {
 
                 <p className="fw-bold mb-4">Add A New Card:</p>
 
-                {/* Cardholder's Name */}
-                <form
-                  method="post"
-                  onSubmit={handleSubmit}
-                  controlId="formControlLgXsd"
-                  className=" form-group mb-4"
-                >
+                <form controlId="formControlLgXsd" className="form-group mb-4">
                   <label className="form-label">Cardholder's Name</label>
                   <input
                     className="form-control"
                     type="text"
                     placeholder="Name On Card"
+                    name="name"
                     onChange={handleChange}
                     value={data.name}
                   />
                 </form>
 
                 <div className="row mb-4">
-                  {/* Card Number */}
                   <div className="col-7">
-                    <form className="form-group" controlId="formControlLgXM">
+                    <form className="form-group">
                       <label className="form-label">Card Number</label>
                       <input
                         className="form-control"
                         type="text"
                         placeholder="Card Number"
                         maxLength="19"
+                        name="card"
                         onChange={handleChange}
                         value={data.card}
                       />
                     </form>
                   </div>
 
-                  {/* Expiry Date */}
                   <div className="col-3">
-                    <form className="form-group" controlId="formControlLgExpk">
+                    <form className="form-group">
                       <label className="form-label">Expire</label>
                       <input
                         className="form-control"
                         type="text"
                         placeholder="MM/YYYY"
                         maxLength="5"
+                        name="expiry"
                         onChange={handleChange}
                         value={data.expiry}
                       />
                     </form>
                   </div>
 
-                  {/* CVV */}
                   <div className="col-2">
-                    <form className="form-group" controlId="formControlLgcvv">
+                    <form className="form-group">
                       <label className="form-label">Cvv</label>
                       <input
                         className="form-control"
                         type="password"
                         placeholder="Cvv"
+                        name="cvv"
                         onChange={handleChange}
                         value={data.cvv}
                       />
@@ -188,4 +169,5 @@ const PaymentForm = () => {
     </section>
   );
 };
+
 export default PaymentForm;
