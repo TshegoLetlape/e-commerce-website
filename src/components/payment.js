@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "../payment.css";
 import { Link } from "react-router-dom";
 
-const PaymentForm = ({ onPaymentSubmit }) => {
+const PaymentForm = ({ handlePaymentSubmit }) => {
   const [data, setData] = useState({
     name: "",
     card: "",
@@ -18,8 +18,7 @@ const PaymentForm = ({ onPaymentSubmit }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    onPaymentSubmit(data);
-    console.log(data);
+    handlePaymentSubmit(data);
   };
 
   return (
@@ -31,7 +30,7 @@ const PaymentForm = ({ onPaymentSubmit }) => {
               <div className="text-center mb-4">
                 <h3>Payment</h3>
               </div>
-              <form onSubmit={handleSubmit}>
+              <form>
                 <p className="fw-bold mb-4 pb-2">Saved cards:</p>
 
                 {/* Saved Card 1 */}
@@ -67,7 +66,11 @@ const PaymentForm = ({ onPaymentSubmit }) => {
 
                 <p className="fw-bold mb-4">Add A New Card:</p>
 
-                <form controlId="formControlLgXsd" className="form-group mb-4">
+                <form
+                  onSubmit={handleSubmit}
+                  controlId="formControlLgXsd"
+                  className="form-group mb-4"
+                >
                   <label className="form-label">Cardholder's Name</label>
                   <input
                     className="form-control"
@@ -87,7 +90,7 @@ const PaymentForm = ({ onPaymentSubmit }) => {
                         className="form-control"
                         type="text"
                         placeholder="Card Number"
-                        maxLength="19"
+                        maxLength="16"
                         name="card"
                         onChange={handleChange}
                         value={data.card}
@@ -139,6 +142,7 @@ const PaymentForm = ({ onPaymentSubmit }) => {
                     className="butn btn btn-dark"
                     variant="dark"
                     size="lg"
+                    type="submit"
                   >
                     <svg
                       className="sav"

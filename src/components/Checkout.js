@@ -13,7 +13,7 @@ const Checkout = () => {
   const address = useSelector((state) => state.address);
   const dispatch = useDispatch();
   const [selectedPayment, setSelectedPayment] = useState({
-    cardEnding: "1253",
+    cardEnding: "1253", // Initialize with default value
     balance: 53.21,
   });
 
@@ -86,8 +86,8 @@ const Checkout = () => {
           <div className="row mt-3 bg-light rounded p-3">
             <div className="col-9">
               <h1>PAYMENT METHOD</h1>
-              <p>Mastercard ending in 1253 </p>
-              <p>$ 53.21 gift card balance</p>
+              <p>Mastercard ending in {selectedPayment.cardEnding} </p>
+              <p>$ {selectedPayment.balance} gift card balance</p>
               <input type="checkbox" />
               <label>Billing Address same as Shipping Address</label>
             </div>
@@ -202,6 +202,7 @@ const Checkout = () => {
                     </td>
                   </tr>
                 </table>
+
                 <div className="">
                   <button
                     className="btn textcenter bg"
