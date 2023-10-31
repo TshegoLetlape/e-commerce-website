@@ -31,21 +31,6 @@ function PaymentForm() {
                   <a href="#!">Remove card</a>
                 </div>
 
-                {/* Saved Card 2 */}
-                {/* <div className="d-flex flex-row align-items-center mb-4 pb-1">
-                  <img
-                    className="img-fluid"
-                    src="https://img.icons8.com/color/48/000000/visa.png"
-                    alt="Visa"
-                  />
-                  <div className="flex-fill mx-3">
-                    <Form.Group controlId="formControlLgXs">
-                      <Form.Label>Card Number</Form.Label>
-                      <Form.Control type="text" value="**** **** **** 4296" />
-                    </Form.Group>
-                  </div>
-                  <a href="#!">Remove card</a>
-                </div> */}
                 <div className="d-flex flex-row align-items-center mb-4 pb-1">
                   <img
                     className="img-fluid"
