@@ -9,6 +9,7 @@ import { clearCart } from "../redux/cartSlice";
 
 const Checkout = () => {
   const cartItems = useSelector((state) => state.cart.cart);
+  const address = useSelector((state) => state.address);
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -64,10 +65,11 @@ const Checkout = () => {
           <div className="row bg-light rounded p-3 mt-3">
             <div className="col-9">
               <h1>SHIPPING ADDRESS</h1>
-              <p>John Maker</p>
-              <p>123 Plae Grond street</p>
-              <p>Vermont, Calfornia</p>
-              <p>United States of America</p>
+              <p>{address.name}</p>
+              <p>{address.street}</p>
+              <p>{address.city}</p>
+              <p>{address.province}</p>
+              <p>{address.country}</p>
             </div>
             <div className="col">
               <Link to="/address">
@@ -79,7 +81,7 @@ const Checkout = () => {
           <div className="row mt-3 bg-light rounded p-3">
             <div className="col-9">
               <h1>PAYMENT METHOD</h1>
-              <p>Mastercard ending in 1253</p>
+              <p>Mastercard ending in 1253 </p>
               <p>$ 53.21 gift card balance</p>
               <input type="checkbox" />
               <label>Billing Address same as Shipping Address</label>
