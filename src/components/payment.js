@@ -61,7 +61,7 @@ function PaymentForm() {
                   <a href="#!">Remove card</a>
                 </div>
 
-                <p className="fw-bold mb-4">Add new card:</p>
+                <p className="fw-bold mb-4">Add A New Card:</p>
 
                 {/* Cardholder's Name */}
                 <form controlId="formControlLgXsd" className=" form-group mb-4">
@@ -115,6 +115,7 @@ function PaymentForm() {
                         cursor="pointer"
                       ></i>
                     </form>
+                    <br />
                   </div>
                   <p>
                     <input type="checkbox" className="deflt" />
@@ -122,9 +123,14 @@ function PaymentForm() {
                   </p>
                 </div>
                 <Link to="/checkout">
-                  <button className="btn btn-dark" variant="dark" size="lg">
+                  <button
+                    className="butn btn btn-dark"
+                    variant="dark"
+                    size="lg"
+                  >
                     <svg
-                      width="24"
+                      className="sav"
+                      width="25"
                       height="24"
                       viewBox="0 0 25 24"
                       fill="none"
@@ -135,7 +141,7 @@ function PaymentForm() {
                         fill="white"
                       />
                     </svg>
-                    <div>Add Payment Method</div>
+                    Add Payment Method
                   </button>{" "}
                 </Link>
                 <br />

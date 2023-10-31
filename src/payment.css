@@ -1,3 +1,13 @@
 .deflt {
   margin-right: 10px;
 }
+.sav {
+  margin-right: 10px;
+  height: 21px;
+  padding-bottom: 3px;
+}
+.butn {
+  background-color: black;
+  margin-left: 3%;
+  padding: 2px 120px;
+}
