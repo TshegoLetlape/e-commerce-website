@@ -1,8 +1,25 @@
 import React from "react";
 import "../payment.css";
 import { Link } from "react-router-dom";
+import { useState } from "react";
 
-function PaymentForm() {
+const PaymentForm = () => {
+  const [data, setData] = useState({
+    name: "",
+    card: "",
+    expiry: "",
+    cvv: "",
+  });
+  const handleChange = (e) => {
+    const name = e.target.name;
+    const value = e.target.value;
+    setData({ ...data, [name]: value });
+  };
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log(data);
+  };
+
   return (
     <section className="p-4 p-md-5">
       <div className="row d-flex justify-content-center">
@@ -12,7 +29,8 @@ function PaymentForm() {
               <div className="text-center mb-4">
                 <h3>Payment</h3>
               </div>
-              <form>
+              <form  onSubmit={handleSubmit}
+        method="POST">
                 <p className="fw-bold mb-4 pb-2">Saved cards:</p>
 
                 {/* Saved Card 1 */}
@@ -49,12 +67,19 @@ function PaymentForm() {
                 <p className="fw-bold mb-4">Add A New Card:</p>
 
                 {/* Cardholder's Name */}
-                <form controlId="formControlLgXsd" className=" form-group mb-4">
+                <form
+                  method="post"
+                  onSubmit={handleSubmit}
+                  controlId="formControlLgXsd"
+                  className=" form-group mb-4"
+                >
                   <label className="form-label">Cardholder's Name</label>
                   <input
                     className="form-control"
                     type="text"
                     placeholder="Name On Card"
+                    onChange={handleChange}
+                    value={data.name}
                   />
                 </form>
 
@@ -67,7 +92,9 @@ function PaymentForm() {
                         className="form-control"
                         type="text"
                         placeholder="Card Number"
-                        maxlength="19"
+                        maxLength="19"
+                        onChange={handleChange}
+                        value={data.card}
                       />
                     </form>
                   </div>
@@ -80,7 +107,9 @@ function PaymentForm() {
                         className="form-control"
                         type="text"
                         placeholder="MM/YYYY"
-                        maxlength="5"
+                        maxLength="5"
+                        onChange={handleChange}
+                        value={data.expiry}
                       />
                     </form>
                   </div>
@@ -93,6 +122,8 @@ function PaymentForm() {
                         className="form-control"
                         type="password"
                         placeholder="Cvv"
+                        onChange={handleChange}
+                        value={data.cvv}
                       />
                       <i
                         className="fa-solid fa-circle-question"
@@ -141,6 +172,5 @@ function PaymentForm() {
       </div>
     </section>
   );
-}
-
+};
 export default PaymentForm;
