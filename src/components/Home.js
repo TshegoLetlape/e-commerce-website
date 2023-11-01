@@ -3,17 +3,12 @@ import { useState } from "react";
 import "../home.css";
 import { useDispatch } from "react-redux";
 import { addtoCart } from "../redux/cartSlice";
-import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import SideBar from "./SideBar";
 import SideBag from "./SideBag";
-import { useParams } from "react-router-dom";
 
 const Home = () => {
-  const { id } = useParams();
   const dispatch = useDispatch();
-  // const cartItems = useSelector((state) => state.cart.cart);
-
   const [data, setDta] = useState(details);
 
   return (

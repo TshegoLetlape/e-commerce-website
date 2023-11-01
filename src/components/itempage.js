@@ -9,14 +9,6 @@ const ItemPage = () => {
   // Use the useParams hook to access the `id` parameter from the URL.
   const { id } = useParams();
   const [detail, setDetail] = useState(null);
-  useEffect(() => {
-    // Find the recipe with the matching 'id'
-    const selectedItem = items.find((item) => item.id === parseInt(id));
-
-    if (selectedItem) {
-      setDetail(selectedItem);
-    }
-  }, [id]);
 
   // Find the item details based on the `id` parameter.
   const item = details.find((item) => item.id === parseInt(id));

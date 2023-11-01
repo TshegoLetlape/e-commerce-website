@@ -6,7 +6,6 @@ import { useNavigate } from "react-router-dom";
 import { getTotals } from "../redux/cartSlice";
 import { useEffect } from "react";
 import { clearCart } from "../redux/cartSlice";
-import PaymentForm from "./payment";
 
 const Checkout = () => {
   const cartItems = useSelector((state) => state.cart.cart);
@@ -14,7 +13,7 @@ const Checkout = () => {
   const dispatch = useDispatch();
   const [selectedPayment, setSelectedPayment] = useState({
     cardEnding: "1253", // Initialize with default value
-    balance: 53.21,
+    balance: 0.0,
   });
 
   useEffect(() => {
@@ -37,7 +36,6 @@ const Checkout = () => {
         [itemId]: prevCounts[itemId] - 1,
       }));
     } else {
-      // You can implement item removal logic here if needed
       alert("Item will be removed from your cart.");
     }
   };

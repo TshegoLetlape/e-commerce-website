@@ -39,7 +39,7 @@ const Address = () => {
     } else {
       dispatch(updateAddress(data));
       alert("your data has been saved");
-      navigate(-1);
+      navigate("/checkout");
     }
   };
   return (

@@ -1,11 +1,7 @@
 import "../bag.css";
 import { useState } from "react";
-import iphone from "../images/Iphone-12-01.png";
-import data from "./Data";
 import { useSelector } from "react-redux";
-import Home from "./Home";
 import SideBar from "./SideBar";
-import SideBag from "./SideBag";
 
 const Bag = () => {
   const cartItems = useSelector((state) => state.cart.cart);
