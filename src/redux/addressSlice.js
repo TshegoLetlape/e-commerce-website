@@ -1,24 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-// const addressSlice = createSlice({
-//   name: "address",
-//   initialState: {
-//     name: "",
-//     street: "",
-//     city: "",
-//     state: "",
-//     country: "",
-//   },
-//   reducers: {
-//     updateAddress: (state, action) => {
-//       // Update the address information in the state
-//       const { name, street, city, state, country } = action.payload;
-//       state.name = name;
-//       state.street = street;
-//       state.city = city;
-//       state.state = state;
-//       state.country = country;
-//     },
 const addressSlice = createSlice({
   name: "address",
   initialState: {
